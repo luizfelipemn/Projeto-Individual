@@ -1,0 +1,114 @@
+@font-face{ font-family:'slayer';
+src:url("./fonte/slayer11.TTF")}
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: slayer;
+}
+
+
+.header{
+    background-color: #FFF67B;
+    color: black;
+    border-bottom: 3px solid #000000;
+ 
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+
+
+}
+.gif{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    float: left;
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    position: relative;
+    left: -150px;
+
+}
+.gif_navbar{
+    height: 100px;
+    width: 100px;
+
+
+}
+
+.header .container{
+    display: flex;
+    justify-content:space-between;
+}
+.navbar{
+   
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    align-items: center;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+
+}
+.banner{
+    background-image:url('./Imagens/1079551.png');
+    background-size: cover;
+    height: 100vh;
+}
+.card_informativo{
+    background-color: white;
+    height: 400px;
+}
+.banner_login{
+    width: 100vw;
+    height: 1000px;
+    background-color: #fb634f;
+
+}
+.card_login{
+    height: 100vh;
+    width: 100vw;
+    border-radius: 8px;
+    
+    
+}
+.card_imagem{
+    height:1000px;
+    background-image: url('./Imagens/1005531.jpg');
+    background-size: cover;
+    width: 50%;
+    float: left;
+    border-radius: 8px;
+    
+    
+}
+.card_login .tela_login{
+    height: 400px;
+    width: 30%;
+    background-color:white;
+    float: right;
+    border-radius: 8px;
+    position: relative;
+    left: -170px;
+    top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.input{
+    border-radius: 8px;
+    width: 150px;
+    height: 20px;
+}
