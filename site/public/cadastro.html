@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="./js/funcoes.js"></script>
+    
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!--header inicio-->
+    <div class="header">
+        <div class="container">
+            <div class="gif" ><a href="index.html">
+                <img class="gif_navbar" src="./Imagens/cfe97f8e6f5c91e9793a663ffe50dd-unscreen.gif"></a>
+            </div>
+        <div class="titulo">
+            <h1>Kimetsu no Yaiba</h1>
+        </div>
+            <ul class="navbar">
+                <li><a href="index.html"; class="agora">Inicio</a></li>
+                <li><a href="sobre_Luiz.html"; class="itensNavbar">Sobre Luiz</a></li>
+                <li><a href="login.html"; class="itensNavbar">Login</a></li>
+                <li><a href="cadastro.html"; class="itensNavbar">Cadastro</a></li>
+            </ul>
+        
+        </div>
+     </div>
+
+     <div class="banner_cadastro">
+         
+         <div class="imagem_cadastro">
+            <div id="cardErro" class="card_erro">
+                <span id="mensagem_erro"></span>
+            </div>
+            <div class="card_cadastro">
+                <div class="tela_cadastro">
+                    <h2>Seja bem-vindo</h2>
+                    <h6>Realize seu Cadastro, digite seus dados.</h5>
+                    <input id="nome_input" class="input" type="text" placeholder="Nome" maxlength="50"><br>
+                    <input id="email_input" class="input" type="text" placeholder="Email" maxlength="50"><br>
+                    <input id="senha_input" class="input" type="password" placeholder="Senha" maxlength="16"><br>
+                    <input id="confirmacao_senha_input" class="input" type="password" placeholder="Confirme sua senha" maxlength="16"><br>
+                    <select id="select_hashira">
+                        <option value="1">Pilar da agua</option>
+                        <option value="2">Pilar dos insetos</option>
+                        <option value="3">Pilar das chamas</option>
+                        <option value="4">Pilar do som</option>
+                        <option value="5">Pilar do amor</option>
+                        <option value="6">Pilar da nevoa</option>
+                        <option value="7">Pilar da pedra</option>
+                        <option value="8">Pilar da serpente</option>
+                        <option value="9">Pilar do vento</option>
+                    </select><br>
+                    
+                    <button onclick="cadastrar()">Cadastrar</button>
+                    <h6>Ja tem cadastro ? Faca seu login <a href="login.html">clicando aqui</a></h6>
+                  
+                </div>
+            </div>
+        
+         </div>
+     </div>
+     
+
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var hashiraVar = select_hashira.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                hashiraServer: hashiraVar
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>

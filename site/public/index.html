@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="gif" ><a href="index.html">
+            <img class="gif_navbar" src="./Imagens/cfe97f8e6f5c91e9793a663ffe50dd-unscreen.gif"></a>
+        </div>
+        <div class="titulo">
+            <h1>Kimetsu no Yaiba</h1>
+        </div>
+            <ul class="navbar">
+                <li><a href="index.html"; class="agora">Inicio</a></li>
+                <li><a href="sobre_Luiz.html"; class="itensNavbar">Sobre Luiz</a></li>
+                <li><a href="login.html"; class="itensNavbar">Login</a></li>
+                <li><a href="cadastro.html"; class="itensNavbar">Cadastro</a></li>
+            </ul>
+        
+        </div>
+     </div>
+     
+     <div class="banner">
+     </div>
+    
+     <div class=" card_informativo container"> <h3><b style="color: black;">Quem são os Hashiras em Demon Slayer?</b></h3><br><br>
+        <h4>Os Hashiras são os guerreiros mais fortes da Corporação de Caçadores de Demônio. No anime, conhecemos a versão mais recente da equipe, liderada por Kagaya Ubuyashiki, o 97º chefe da organização.<br> <br><div class="div_foto" ><img class="foto_banner" src="./Imagens/Kagaya Ubuyashiki.jpg" ></div><br>
+        Estes são caçadores de demônio que aperfeiçoaram suas técnicas de respiração ao máximo e são capazes de bater de frente com os Luas Inferiores e, talvez, com os Luas Superiores do Muzan. Os Hashiras existem há muito tempo, um título quase tão antigo quanto a Corporação e o próprio Rei Demônio.<br><br>
+        Na Corporação, eles são designados para as missões mais perigosas, que podem envolver os Doze Kizuki. Eles também são responsáveis por guiar os novos Caçadores de Demônio, sendo encorajados a adotar pupilos, quando necessário, para passar suas técnicas e conhecimento adiante.<br> <br>
+        <div class="div_foto" ><img class="foto_banner" src="./Imagens/rengoku gif.gif" ></div><br>
+        <br>
+        O nome Hashira é o japonês para “Pilar”, ressaltando que estes são os pilares que protegem a humanidade da escuridão. Geralmente eles vem de famílias de Caçadores de Demônio, que mantém sua técnica de respiração através das gerações. Ainda, em boa parte, estas pessoas possuem passados trágicos relacionados aos demônios, tanto que resolveram doar sua vida para o aprimoramento da caça, quando não possuem mais nada para perder.<br> <br>
+        <div class="div_foto"><img class="foto_banner" src="./Imagens/hashiras-demon-slayer.gif" ></div><br>
+    </h4>
+         
+     </div>
+     <div class="card_banner">
+    <div class="container"><br>
+        <h2>Selecione um pilar</h2>
+        <select id="select">
+            <option value="agua">Pilar da agua</option>
+            <option value="inseto">Pilar dos insetos</option>
+            <option value="chama">Pilar das chamas</option>
+            <option value="som">Pilar do som</option>
+            <option value="amor">Pilar do amor</option>
+            <option value="nevoa">Pilar da nevoa</option>
+            <option value="pedra">Pilar da pedra</option>
+            <option value="serpente">Pilar da serpente</option>
+            <option value="vento">Pilar do vento</option>
+        </select>
+        <button class="botao" onclick="exibir()">Escolher Hashira</button><br><br>
+        <div id="resultado"></div>
+    </div>
+</div>
+<div class="footer"><div class="container">
+    <h1>Projeto individual &copy; Luiz Felipe &hearts;</h1>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+    function exibir(){
+        var hashira = select.value
+        if(hashira == "agua"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/tomioka.jpg"; style="height:400px"><br>
+            <h3>Pilar da Água: Giyu Tomioka</h3><br>
+            O primeiro Hashira que aparece na história é justamente quem coloca o Tanjiro no caminho para se tornar um Caçador. Giyu é aquele que encontra o protagonista tentando lidar com a transformação da Nezuko em demônio.<br>
+            Ele é o Pilar da Água, pupilo de um antigo Pilar, Sakonji Urokodaki - que também se torna o sensei do Tanjiro. Tomioka domina a Respiração da Água e suas 10 formas; ele também criou uma técnica nova, adicionando um 11º corte ao estilo.`
+            
+
+        }
+        else if(hashira == "inseto"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/inseto.jpg"; style="height:400px"><br>
+            <h3>Pilar dos Insetos: Shinobu Kocho</h3><br>
+            A Shinobu também surge no anime antes dos outros Hashira. Ela vai junto com o Giyu salvar o grupo do Tanjiro depois do incidente na Montanha Natagumo - onde houve a luta contra o primeiro Lua Inferior.<br>
+            Shinobu Kocho é diferente de qualquer outro Caçador. Suas técnicas não são apenas baseadas em respiração, mas também na produção de venenos que conseguem matar demônios. Até mesmo sua katana é diferente, com um corpo fino e uma ponta mais larga, como se fosse um ferrão, especial para a aplicação de toxinas.`
+            
+
+        }
+        else if(hashira == "chama"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/chama_Rengoku.jpg"; style="height:400px"><br>
+            <h3>Pilar das Chamas: Kyojuro Rengoku</h3><br>
+            Um dos protagonistas do primeiro filme de Demon Slayer, Kyojuro Rengoku é o Pilar das Chamas e um dos mais queridos pelos fãs.<br>
+            Kyojuro vem de uma família de Caçadores e seu pai, Shinjuro Rengoku, era o Hashira das Chamas anterior. O rapaz é tido como um Caçador de Demônios prodígio e dominou a poderosa Respiração das Chamas e suas sete formas restantes, passadas de geração em geração pelos Rengoku.`
+            
+
+        }
+        else if(hashira == "som"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/uzui.jpg"; style="height:400px"><br>
+            <h3>Pilar do Som: Tengen Uzui</h3><br>
+            Com a nova temporada de Demon Slayer anunciada, em breve conheceremos mais de Tengen Uzui, o Pilar do Som; ele é o Hashira responsável pela equipe do Tanjiro durante o arco do Distrito da Luz Vermelha.<br>
+            Tengen se orgulha de ser “extravagante” e isso se reflete até em sua espada; o Hashira do Som carrega duas lâminas nichirin que são bem mais largas que uma katana, com uma corrente prendendo uma a outra. Junto da Respiração do Som de Uzui, elas deferem ataques explosivos e letais.`
+            
+
+        }
+        else if(hashira == "amor"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/amor_hashira.jpg"; style="height:400px"><br>
+            <h3>Pilar do Amor: Mitsuri Kanroji</h3><br>
+            Não se engane pelo “amor” do título; a Mitsuri é uma Hashira extremamente poderosa e letal.<br>
+            Mitsuri Kanroji é o Pilar do Amor e a conhecemos junto dos outros Hashiras durante o encontro entre Tanjiro e Kagaya. Sua Respiração do Amor é uma derivante da Respiração das Chamas e possui seis formas. Na verdade, foi a própria Kanroji quem desenvolveu a técnica, trabalhando junto com o Pilar das Chamas.`
+            
+
+        }
+        else if(hashira == "nevoa"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/nevoa_hashira.jpg"; style="height:400px"><br>
+            <h3>Pilar da Névoa: Muichiro Tokito</h3><br>
+            Mesmo com apenas 14 anos, Muichiro Tokito já é um dos Pilares da Corporação e um grande Caçador de Demônio.<br>
+            Muichiro foi levado à Corporação depois de uma sequência de tragédias. Seus pais morreram em um acidente nas montanhas e seu irmão foi assassinado por um demônio. Ele, então, é resgatado pela família de Kagaya Ubuyashiki e começa a treinar para se tornar um Caçador.`
+            
+
+        }
+        else if(hashira == "pedra"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/pedra_hashira.jpg"; style="height:400px"><br>
+            <h3>Pilar da Pedra: Gyomei Himejima</h3><br>
+            Até mesmo entre os Hashiras, um Pilar tem que ser mais poderoso, né? Esse seria, então, Gyomei Himejima, o monge da Respiração da Pedra.<br>
+            Himejima é um dos Hashiras mais leais à família Ubuyashiki, quando foi salvo por Kagaya de uma condenação injusta. Criado em um templo junto de outros órfãos, ele foi acusado de matar seus companheiros depois que foi o único sobrevivente de um ataque de demônios.`
+            
+
+        }
+        else if(hashira == "serpente"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/serpente_hashira.jpg"; style="height:400px"><br>
+            <h3>Pilar da Serpente: Obanai Iguro</h3><br>
+            Todo Pilar suporta uma quantidade imensa de traumas; no entanto, Obanai Iguro, o Hashira da Serpente, pode ser o que carrega o fardo mais pesado do grupo.<br>
+            Iguro nasceu em um clã de ladrões que cultuavam um demônio. Dessa forma, enquanto o monstro dava uma vida de rei para seus servos, eles o seguiam e faziam todas as suas vontades - incluindo sacrificar recém nascidos para saciar sua fome.`
+            
+
+        }
+        else if(hashira == "vento"){
+            resultado.innerHTML = `<img class="foto_banner" src="./Imagens/vento_hashira.jpg"; style="height:400px"><br>
+            <h3>Pilar do Vento: Sanemi Shinazugawa</h3><br>
+            Por fim, o Hashira mais violento, que já deu um problemão para o Tanjiro no anime.<br>
+            Sanemi é o irmão mais velho de um dos outros novatos que passaram na prova para a Corporação junto do Tanjiro, o Genya. Os dois são sobreviventes de uma família abusiva e sua mãe e os outros cinco irmãos foram mortos durante um ataque de demônio.`
+            
+
+        }
+    }
+
+</script>
