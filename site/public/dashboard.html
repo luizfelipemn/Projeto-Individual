@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="gif" ><a href="index.html">
+            <img class="gif_navbar" src="./Imagens/cfe97f8e6f5c91e9793a663ffe50dd-unscreen.gif"></a>
+        </div>
+        <div class="titulo">
+            <h1>Kimetsu no Yaiba</h1>
+        </div>
+            <ul class="navbar_dashboard">
+                <li><a href="index.html"; class="agora">Inicio</a></li>
+                <li><a href="login.html"; class="itensNavbar">Login</a></li>
+                <li><a href="dashboard.html"; class="itensNavbar">Perfil</a></li>
+            </ul>
+        
+        </div>
+     </div>
+
+     <div class="container">
+         <div class="dashboard1">
+        <div>
+            <canvas id="myChart"></canvas>
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <script>
+            const labels = [
+              'Giyu Tomioka',
+              'Shinobu Kocho',
+              'Kyojuro Rengoku',
+              'Tengen Uzui',
+              'Mitsuri Kanroji',
+              'Muichiro Tokito',
+              'Gyomei Himejima',
+              'Obanai Iguro',
+              'Sanemi Shinazugawa'
+            ];
+          
+            const data = {
+              labels: labels,
+              datasets: [{
+                label: 'Votos',
+                data: [9, 4, 12, 8, 5, 3, 6, 2, 4],
+    backgroundColor: [
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(114, 8, 82, 0.2)',
+      'rgba(245, 242, 55, 0.4)',
+      'rgba(194, 159, 188, 0.2)',
+      'rgba(255, 44, 220, 0.2)',
+      'rgba(37, 247, 184, 0.2)',
+      'rgba(156, 130, 56, 0.2)',
+      'rgba(255, 241, 40, 0.2)',
+      'rgba(0, 27, 12, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 252, 0)',
+      'rgb(114, 8, 82)',
+      'rgb(245, 50, 50)',
+      'rgb(194, 159, 188)',
+      'rgb(255, 44, 220)',
+      'rgb(20, 20, 20)',
+      'rgb(156, 130, 56)',
+      'rgb(60, 255, 0)',
+      'rgb(255, 255, 255)'
+    ],
+    borderWidth: 1
+  }]
+};
+          
+            const config = {
+  type: 'bar',
+  data: data,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+};
+          </script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+  
+     </div>
+    </div>
+     

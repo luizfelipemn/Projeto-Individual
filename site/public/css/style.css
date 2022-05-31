@@ -139,7 +139,7 @@ body {
 .card_login .tela_login{
     
     width: 50%;
-    background-color:white;
+    background-color:rgba(255, 255, 255,0.8);
     float: right;
     border-radius: 8px;
     position: relative;
@@ -212,7 +212,7 @@ body {
 .tela_cadastro{
     width: 550px;
     height: 450px;
-    background-color:white;
+    background-color:rgba(255, 255, 255,0.8);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -220,7 +220,8 @@ body {
     flex-direction: column;
     position: relative;
     top: 130px;
-    left:95%
+    left:95%;
+    color:#000000
 
 }
 #select_hashira{
@@ -228,4 +229,25 @@ body {
     color: rgb(0, 0, 0);
     border-radius: 10px;
     height: 30px;
+}
+
+.navbar_dashboard { 
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+    align-items: center;
+    
+
+}
+.navbar_dashboard a{
+    color: black;
+    text-decoration: none;
+}
+
+.dashboard1{
+    position: relative;
+    top:200px;
+    height: 700px;
+    width: 600px;
+    float: left;
 }
