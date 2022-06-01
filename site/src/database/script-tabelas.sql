@@ -27,4 +27,18 @@ insert into usuario values
 (null,'luiz felipe', 'luiz@sptech.com', '1234',null);
 
 insert into hashira values
-(null,'Giyu Tomioka', 'Água', 'Azul');
+(null,'Giyu Tomioka', 'Água', 'Azul'),
+(null,'Shinobu Kocho', 'Inseto', 'Azul lavanda'),
+(null,'Kyojuro Rengoku', 'Chamas', 'Vermelha'),
+(null,'Tengen Uzui', 'Som', 'Âmbar'),
+(null,'Mitsuri Kanroji', 'Amor', 'Rubro-negra'),
+(null,'Muichiro Tokito', 'Névoa', 'Branca'),
+(null,'Gyomei Himejima', 'Pedra', 'Cinza'),
+(null,'Obanai Iguro', 'Serpente', 'Lavanda'),
+(null,'Sanemi Shinazugawa', 'Vento', 'Verde');
+
+/* Select votos pilar favorito*/
+select pilar as pilar ,count(fk_hashira) as 'Votos'
+from hashira as h
+join usuario as u on u.fk_hashira = h.id_hashira
+group by pilar;
