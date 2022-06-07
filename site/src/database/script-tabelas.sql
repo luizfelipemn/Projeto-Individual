@@ -1,7 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-/* para workbench - local - desenvolvimento */
 create database kimetsu_no_yaiba;
 use kimetsu_no_yaiba;
 
@@ -24,7 +20,44 @@ select* from hashira;
 select* from usuario;
 
 insert into usuario values 
-(null,'luiz felipe', 'luiz@sptech.com', '1234',null);
+(null,'luiz felipe', 'luiz2@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz3@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz4@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz5@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz6@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz7@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz8@sptech.com', '1234',1),
+(null,'luiz felipe', 'luiz9@sptech.com', '1234',2),
+(null,'luiz felipe', 'luiz10@sptech.com', '1234',2),
+(null,'luiz felipe', 'luiz11@sptech.com', '1234',2),
+(null,'luiz felipe', 'luiz12@sptech.com', '1234',2),
+(null,'luiz felipe', 'luiz13@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz14@sptech.com', '1234',3),
+(null,'luiz felipe', 'lui15@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz16@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz17@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz18@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz19@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz20@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz21@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz22@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz23@sptech.com', '1234',4),
+(null,'luiz felipe', 'luiz24@sptech.com', '1234',4),
+(null,'luiz felipe', 'luiz25@sptech.com', '1234',4),
+(null,'luiz felipe', 'luiz26@sptech.com', '1234',4),
+(null,'luiz felipe', 'luiz27@sptech.com', '1234',4),
+(null,'luiz felipe', 'luiz28@sptech.com', '1234',5),
+(null,'luiz felipe', 'luiz29@sptech.com', '1234',5),
+(null,'luiz felipe', 'luiz30@sptech.com', '1234',6),
+(null,'luiz felipe', 'luiz31@sptech.com', '1234',7),
+(null,'luiz felipe', 'luiz32@sptech.com', '1234',7),
+(null,'luiz felipe', 'luiz33@sptech.com', '1234',7),
+(null,'luiz felipe', 'luiz34@sptech.com', '1234',8),
+(null,'luiz felipe', 'luiz35@sptech.com', '1234',9),
+(null,'luiz felipe', 'luiz36@sptech.com', '1234',9),
+(null,'luiz felipe', 'luiz37@sptech.com', '1234',8);
+
+
 
 insert into hashira values
 (null,'Giyu Tomioka', 'Água', 'Azul'),
@@ -42,3 +75,9 @@ select pilar as pilar ,count(fk_hashira) as 'Votos'
 from hashira as h
 join usuario as u on u.fk_hashira = h.id_hashira
 group by pilar;
+
+select count(id_usuario) as 'Numero de acessos'
+from usuario;
+
+
+
