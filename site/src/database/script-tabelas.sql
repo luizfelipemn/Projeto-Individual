@@ -19,6 +19,17 @@ alter table usuario add foreign key (fk_hashira) references hashira (id_hashira)
 select* from hashira;
 select* from usuario;
 
+insert into hashira values
+(null,'Giyu Tomioka', 'Água', 'Azul'),
+(null,'Shinobu Kocho', 'Inseto', 'Azul lavanda'),
+(null,'Kyojuro Rengoku', 'Chamas', 'Vermelha'),
+(null,'Tengen Uzui', 'Som', 'Âmbar'),
+(null,'Mitsuri Kanroji', 'Amor', 'Rubro-negra'),
+(null,'Muichiro Tokito', 'Névoa', 'Branca'),
+(null,'Gyomei Himejima', 'Pedra', 'Cinza'),
+(null,'Obanai Iguro', 'Serpente', 'Lavanda'),
+(null,'Sanemi Shinazugawa', 'Vento', 'Verde');
+
 insert into usuario values 
 (null,'luiz felipe', 'luiz2@sptech.com', '1234',1),
 (null,'luiz felipe', 'luiz3@sptech.com', '1234',1),
@@ -33,7 +44,7 @@ insert into usuario values
 (null,'luiz felipe', 'luiz12@sptech.com', '1234',2),
 (null,'luiz felipe', 'luiz13@sptech.com', '1234',3),
 (null,'luiz felipe', 'luiz14@sptech.com', '1234',3),
-(null,'luiz felipe', 'lui15@sptech.com', '1234',3),
+(null,'luiz felipe', 'luiz15@sptech.com', '1234',3),
 (null,'luiz felipe', 'luiz16@sptech.com', '1234',3),
 (null,'luiz felipe', 'luiz17@sptech.com', '1234',3),
 (null,'luiz felipe', 'luiz18@sptech.com', '1234',3),
@@ -59,16 +70,7 @@ insert into usuario values
 
 
 
-insert into hashira values
-(null,'Giyu Tomioka', 'Água', 'Azul'),
-(null,'Shinobu Kocho', 'Inseto', 'Azul lavanda'),
-(null,'Kyojuro Rengoku', 'Chamas', 'Vermelha'),
-(null,'Tengen Uzui', 'Som', 'Âmbar'),
-(null,'Mitsuri Kanroji', 'Amor', 'Rubro-negra'),
-(null,'Muichiro Tokito', 'Névoa', 'Branca'),
-(null,'Gyomei Himejima', 'Pedra', 'Cinza'),
-(null,'Obanai Iguro', 'Serpente', 'Lavanda'),
-(null,'Sanemi Shinazugawa', 'Vento', 'Verde');
+
 
 /* Select votos pilar favorito*/
 select pilar as pilar ,count(fk_hashira) as 'Votos'
@@ -78,6 +80,3 @@ group by pilar;
 
 select count(id_usuario) as 'Numero de acessos'
 from usuario;
-
-
-
